@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+{% block body %}
+  <div class="row" id="title">
+    <h1>Login</h1>
+  </div>
+  <form action="/login" method="POST">
+    <div class="row" id="first-line">
+      <div class="six columns">
+        <label for="username">Username</label>
+        <input class="u-full-width" type="text" placeholder="Your username" id="username" name="username" required>
+      </div>
+    </div>
+    <div class="row" id="passw-line">
+      <div class="six columns">
+        <label for="password">Password</label>
+        <input class="u-full-width" type="password" placeholder="Your password" id="password" name="password" required>
+      </div>
+    </div>
+    <div class="row action">
+      <div class="three columns">
+        <input class="button-primary" type="submit" value="login">
+      </div>
+    </div>
+  </form>
+{% endblock %}

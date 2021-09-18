@@ -1,0 +1,6 @@
+click>=5.1
+itsdangerous>=0.24
+jinja2>=2.10.1
+werkzeug>=0.15
+flask==1.1.2
+pyotp==2.6.0
