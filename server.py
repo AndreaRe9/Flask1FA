@@ -1,4 +1,5 @@
-from flask import Flask, render_template, redirect, request, url_for, flash, session
+from flask import Flask, render_template, redirect, request, url_for, flash
+import os
 
 app = Flask(__name__)
 
@@ -8,7 +9,6 @@ def index():
 
 @app.route("/login", methods=['GET', 'POST'])
 def login():
-  message = None
   form_user = request.form.get("username")
   form_pass = request.form.get("password")
   if request.method == 'POST':
@@ -22,5 +22,5 @@ def login():
 if __name__ == "__main__":
   app.config["USER"] = "username"
   app.config["PASS"] = "password"
-  app.config["SECRET_KEY"] = b'!abexc/)#0021&'
+  app.config["SECRET_KEY"] = os.urandom(16).hex()
   app.run(debug=True)
