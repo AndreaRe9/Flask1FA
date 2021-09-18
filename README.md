@@ -1,2 +1,2 @@
-# Flask1FA
-Simple Flask web application that implements One-Factor authentication
+# Flask2FA
+This branch adds Two-Factor authentication to the Flask web application
